@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton.csproj", "{B3EE7F20-42B9-4D3C-A1D5-3C5BEEEA5488}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonTests", "..\SingletonTests\SingletonTests.csproj", "{31E078F5-0274-4D22-8797-1553246A01CD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{B3EE7F20-42B9-4D3C-A1D5-3C5BEEEA5488}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3EE7F20-42B9-4D3C-A1D5-3C5BEEEA5488}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3EE7F20-42B9-4D3C-A1D5-3C5BEEEA5488}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31E078F5-0274-4D22-8797-1553246A01CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31E078F5-0274-4D22-8797-1553246A01CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31E078F5-0274-4D22-8797-1553246A01CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31E078F5-0274-4D22-8797-1553246A01CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

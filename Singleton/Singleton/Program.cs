@@ -2,7 +2,10 @@
 
 using System;
 using System.Threading;
+using EnvDTE;
 using Singleton.Singletons;
+using VSLangProj;
+using Thread=System.Threading.Thread;
 
 #endregion
 
@@ -63,6 +66,36 @@ namespace Singleton
                 ISingleton singleton = func();
                 singleton.Do();
             }
+        }
+    }
+
+
+    internal class pr
+    {
+
+        static DTE dte;
+        static Project Project;
+
+
+        void Start()
+        {
+            IServiceProvider serviceProvider = Host as IServiceProvider;
+            if (serviceProvider != null)
+            {
+                dte = serviceProvider.GetService(typeof(DTE)) as DTE;
+            }
+
+            // Fail if we couldn't get the DTE. This can happen when trying to run in TextTransform.exe
+            if (dte == null)
+            {
+                throw new Exception("T4MVC can only execute through the Visual Studio host");
+            }
+
+
+            VSProject vsProj = (VSProject)dte.Solution.Projects.Item(0).Object;
+            Project project = vsProj.References.ContainingProject;
+
+            Project = GetProjectContainingT4File(Dte);
         }
     }
 }
